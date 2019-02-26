@@ -1,0 +1,60 @@
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.android.gms.oss-licenses-plugin'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.toucheventexplorer"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "Release 0.1"
+        vectorDrawables.generatedDensities = []
+        vectorDrawables.useSupportLibrary = true
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+        return void
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+    }
+    productFlavors {
+    }
+    dataBinding {
+        enabled true
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/2'] } }
+}
+
+dependencies {
+
+    implementation('com.google.api-client:google-api-client-android:1.20.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation('com.google.apis:google-api-services-drive:v3-rev6-1.20.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation "androidx.appcompat:appcompat:$ANDROIDX_VERSION"
+    implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINT_LAYOUT_VERSION"
+    implementation "androidx.recyclerview:recyclerview:$RECYCLERVIEW_VERSION"
+    implementation "com.google.android.material:material:$MATERIAL_VERSION"
+    // For license display
+    implementation 'com.google.android.gms:play-services-oss-licenses:16.0.2'
+}
+repositories {
+    mavenCentral()
+}

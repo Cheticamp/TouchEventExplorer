@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Touch Event Explorer</string>
+    <string name="sent_log_title">Touch Event Explorer Log</string>
+    <string name="n_a">n/a</string>
+    <string name="activity_label" translatable="false">Activity</string>
+    <string name="expand_log">Expand log</string>
+    <string name="clear_log">Clear log</string>
+    <string name="reset_switches">Reset switches</string>
+    <string name="clear_on_gesture_start">Clear on gesture start</string>
+    <string name="Help">Help</string>
+    <string name="help">Help</string>
+
+    <!-- Define switch rows labels. -->
+    <string name="dispatchtouchevent" translatable="false">dispatch\nTouchEvent</string>
+    <string name="onintercepttouchevent" translatable="false">onIntercept\nTouchEvent</string>
+    <string name="activity" translatable="false">Activity</string>
+    <string name="viewgroup_a" translatable="false">Group A</string>
+    <string name="viewgroup_b" translatable="false">Group B</string>
+    <string name="view" translatable="false">View</string>
+    <string name="ontouch" translatable="false">onTouch</string>
+    <string name="ontouch_event" translatable="false">onTouch\nEvent</string>
+    <string name="open_source_licenses">Open Source Licenses</string>
+    <string name="send_log">Send log</string>
+    <string name="send_log_to">Send log to</string>
+</resources>

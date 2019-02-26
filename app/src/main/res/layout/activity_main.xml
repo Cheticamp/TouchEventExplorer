@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryLight"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <include
+            android:id="@+id/switchTable"
+            layout="@layout/switch_layout_include"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/onScreenLog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/onScreenLog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/white"
+            android:elevation="5dp"
+            android:scrollbarFadeDuration="1500"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/viewGroupA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchTable"
+            app:layout_constraintVertical_weight="0.6"
+            tools:targetApi="lollipop" />
+
+        <com.example.toucheventexplorer.TouchViewGroup
+            android:id="@+id/viewGroupA"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/holo_blue_light"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:tag="A"
+            android:visibility="visible"
+            app:groupName="ViewGroup A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onScreenLog"
+            app:layout_constraintVertical_weight=".4"
+            app:logColor="#D81B60"
+            tools:targetApi="lollipop">
+
+            <com.example.toucheventexplorer.TouchViewGroup
+                android:id="@+id/viewGroupB"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorPrimaryLight"
+                android:elevation="2dp"
+                android:tag="B"
+                app:groupName="ViewGroup B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:logColor="#1E88E5"
+                tools:targetApi="lollipop">
+
+                <com.example.toucheventexplorer.TouchView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorPrimaryLighter"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/view"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/view_label_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1"
+                    app:layout_constraintWidth_percent="0.75"
+                    app:logColor="@android:color/holo_green_dark"
+                    tools:targetApi="lollipop" />
+            </com.example.toucheventexplorer.TouchViewGroup>
+
+        </com.example.toucheventexplorer.TouchViewGroup>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activityLabel"
+            style="@style/AppTheme.ViewLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-90"
+            android:text="@string/activity_label"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/view_label_size"
+            android:translationX="-16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/viewGroupA"
+            app:layout_constraintStart_toStartOf="@+id/viewGroupA"
+            app:layout_constraintTop_toTopOf="@+id/viewGroupA"
+            app:layout_constraintVertical_bias="0.13999999" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

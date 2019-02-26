@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Define switch rows labels. -->
+    <string name="dispatchtouchevent" translatable="false">dispatchTouchEvent</string>
+    <string name="onintercepttouchevent" translatable="false">onInterceptTouchEvent</string>
+
+    <!-- Define switch column headers. -->
+</resources>

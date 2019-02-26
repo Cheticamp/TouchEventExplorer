@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<lint>
+    <issue id="IconColors">
+        <ignore path="src/main/res/drawable-v24/ic_information_outline.png" />
+    </issue>
+    <issue id="all">
+        <ignore path="src/main/assets/help_pages/Touch-Event-Flow.svg" />
+    </issue>
+</lint>

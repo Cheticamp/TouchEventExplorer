@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.myapplication.MainActivity">
+    <item
+        android:id="@+id/resize_log"
+        android:icon="@drawable/ic_zoom_out_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/expand_log"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/clearOnGestureStart"
+        android:checkable="true"
+        android:orderInCategory="200"
+        android:title="@string/clear_on_gesture_start"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/reset_switches"
+        android:orderInCategory="300"
+        android:title="@string/reset_switches"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/clear_log"
+        android:orderInCategory="400"
+        android:title="@string/clear_log"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/send_log"
+        android:orderInCategory="500"
+        android:title="@string/send_log"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/ic_information_outline"
+        android:orderInCategory="600"
+        android:title="@string/Help"
+        app:showAsAction="never" />
+</menu>

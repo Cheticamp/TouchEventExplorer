@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<header>
+    <style>
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 95%;
+            max-height: 90vh;
+            margin: auto;
+        }
+        body {
+          margin: 15px 15px 15px 15px;
+        }
+
+
+    </style>
+</header>
+<body>
+<h3 style="text-align: center;">Touch Event Explorer</h3>
+<p>Use this app to explore how Android handles touch events
+    (<a href="https://developer.android.com/reference/android/view/MotionEvent">MotionEvent</a>). Touch Event Explorer traces touch events through the app and makes on-screen log entries to show how the events flow.</p>
+<p style="text-align: center;"><strong><u>The Android Touch System</u></strong></p>
+<p>There are many excellent explanations of the Android touch system on the web. Here are two that
+    do a good job of explaining how the touch system works:</p>
+<p><a href="https://files-cdn.cnblogs.com/files/sunzn/PRE_andevcon_mastering-the-android-touch-system.pdf">Mastering the Android Touch System</a> by Dave Smith. This is a link to a slide presentation. There is also a video of the talk available that you can find through a search.</p>
+<p>Suragch's <a href="https://stackoverflow.com/questions/7449799/how-are-android-touch-events-delivered/46862320#46862320">explanatory answer</a> on Stack Overflow to the question <em>"How are Android touch events delivered?"</em> You will find links at the end of the post to additional information. The basic operation of this app is modeled on the diagrams contained within this Stack Overflow answer.</p>
+<p>T<strong>ouch Event Flow Diagram<br /></strong><br /> The following diagram visually shows touch event flow and is adapted from the diagram that Suragch presents in the Stack Overflow post mentioned above. Check the operaton of the app against this diagram to better understand how events flow and what controls the flow.<em><br /></em></p>
+<div class="imgbox"><img class="center-fit" src="file:///android_asset/help_pages/Touch-Event-Flow.svg" /></div>
+<p style="text-align: center;"><strong><u>How the App Works</u></strong></p>
+<p>By touching the lower part of the main screen (the touch area), a gesture is started that
+    generates a series of touch events (<a href="https://developer.android.com/reference/android/view/MotionEvent">MotionEvent</a>).
+    Within the app, each method invoked during a touch event is either part of a view or an activity.
+    As an event makes its way through the various methods, a log entry is made to the on-screen log. The flow of an gesture can be modified by setting switches in the top part of the screen.</p>
+<div class="imgbox"><img class="center-fit" src="file:///android_asset/help_pages/main_screen_help.png" /></div>
+<p><strong>Switch Section</strong></p>
+<p>Set a switch in the switch section to specify whether a view reports an event as "handled" or not.</p>
+<p>For instance, if the switch for "Group A/onTouchEvent" is set, the ViewGroup A onTouchEvent method will return "true" indicating that the event was handled by the onTouchEvent&nbsp;method of ViewGroup A and further processing will be discontinued.</p>
+<p>If a switch is not set, normal processing takes place and the method will return true or false depending upon the outcome of normal event processing.</p>
+<p><strong>On-screen Log</strong></p>
+<p>The center section is where the app logs the touch events.</p>
+<p><strong><em>Log entry at the start of each touch event:</em></strong></p>
+<p>=====&gt; [view_name] ACTION_* (pointers) Duplicates</p>
+<p><em><strong>view_name:</strong></em> Either "Activity", "ViewGroup A", "ViewGroup B" or "View" corresponding to the view that has received a touch event.</p>
+<p><em><strong>ACTION_*:</strong></em> ACTION_DOWN, ACTION_MOVE, etc. See the documentation for <a href="https://developer.android.com/reference/android/view/MotionEvent&quot;" target="_blank" rel="noopener">MotionEvent</a> for a complete list of events.
+    This app can produce a subset of motion events.</p>
+<p><em><strong>(pointers)</strong> </em>- One or more pointers responsible for the event. For example, (0) for pointer zero, (1,2) for pointers 1 and 2.</p>
+<p><em><strong>Duplicates</strong></em> - Appears if the preceding MotionEvent has duplicated. A period is displayed each time the event duplicates. (Coordinates and history are ignored for the purpose of detecting duplicates.)</p>
+<p><strong><em>Log entry as a motion event makes it's way through the call stack:</em></strong></p>
+<p><em><strong>[view_name]:</strong> </em>[method_name] [handled=true|false]</p>
+<p><strong>view_name:</strong> As specified above.</p>
+<p><strong>method_name:</strong> Either "dispatchTouchEvent", "onInterceptTouchEvent", "onTouch" or "onTouchEvent". This is the name of a method that has received a touch event.</p>
+<p><em><strong>handled=true|false:</strong></em> Each method logs its return status as either the touch event was "handled" (handled=true) or was not handled (handled=false). Log entries that record when a method is entered do not have the handled text.</p>
+<p><strong><br />Touch Area</strong></p>
+<p>The bottom area is where the touches occur. View is a child of ViewGroup B which is a child of ViewGroup A. ViewGroup A is contained within Activity. Only views that are directly under the touch point on the screen will receive any notification of the touch event.</p>
+<p>For example, touching ViewGroup B without touching the View will send touch notifications, by default, to the Activity, ViewGroup A and ViewGroup B but not the View. The Activity and ViewGroup A will receive notification if ViewGroup A is touched.</p>
+<p><strong><u>ActionBar Controls</u></strong></p>
+<p><img src="file:///android_asset/help_pages/expand_log_control.png" width="25px" height="25px" /> Expands and contracts the log area.</p>
+<p>Overflow menu.</p>
+<ul style="margin-left: 15px;">
+    <li>
+        <p>Clear on gesture start: If set, the on-screen log is cleared at the start of each gesture.</p>
+    </li>
+    <li>
+        <p>Reset switches: Reset all switches to "off."</p>
+    </li>
+    <li>
+        <p>Clear log: Clears the on-screen log immediately.</p>
+    </li>
+    <li>
+        <p>Send log: Send the on-screen log to another app.</p>
+    </li>
+    <li>
+        <p>Help: This help.</p>
+    </li>
+</ul>
+</body>

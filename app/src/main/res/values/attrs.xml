@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="TouchViewGroup">
+        <attr name="groupName" format="string" />
+        <attr name="logColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="TouchView">
+        <attr name="logColor" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/switchConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_background"
+        android:padding="8dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <TextView
+            android:id="@+id/headingR2C1"
+            style="@style/AppTheme.SwitchLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/activity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headingR1C2"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/headingR3C1"
+            style="@style/AppTheme.SwitchLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/viewgroup_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headingR2C1" />
+
+        <TextView
+            android:id="@+id/headingR4C1"
+            style="@style/AppTheme.SwitchLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/viewgroup_b"
+            app:layout_constraintBottom_toTopOf="@+id/headingR5C1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headingR3C1" />
+
+        <TextView
+            android:id="@+id/headingR5C1"
+            style="@style/AppTheme.SwitchLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headingR4C1" />
+
+        <TextView
+            android:id="@+id/headingR1C2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/dispatchtouchevent"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@+id/headingR1C3"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/barrier3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/headingR1C3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:text="@string/onintercepttouchevent"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@+id/headingR1C4"
+            app:layout_constraintStart_toEndOf="@+id/headingR1C2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/headingR1C4"
+            style="@style/AppTheme.SwitchLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ontouch"
+            app:layout_constraintBottom_toBottomOf="@+id/headingR1C3"
+            app:layout_constraintEnd_toStartOf="@+id/headingR1C5"
+            app:layout_constraintStart_toEndOf="@+id/headingR1C3" />
+
+        <TextView
+            android:id="@+id/headingR1C5"
+            style="@style/AppTheme.SwitchLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/ontouch_event"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/headingR1C4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/activityDispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/headingR2C1"
+            app:layout_constraintEnd_toEndOf="@id/headingR1C2"
+            app:layout_constraintStart_toStartOf="@id/headingR1C2"
+            app:layout_constraintTop_toTopOf="@+id/headingR2C1" />
+
+        <Switch
+            android:id="@+id/groupADispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/headingR3C1"
+            app:layout_constraintEnd_toEndOf="@+id/activityDispatch"
+            app:layout_constraintStart_toStartOf="@+id/activityDispatch"
+            app:layout_constraintTop_toTopOf="@+id/headingR3C1" />
+
+        <Switch
+            android:id="@+id/groupBDispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/headingR4C1"
+            app:layout_constraintEnd_toEndOf="@+id/groupADispatch"
+            app:layout_constraintStart_toStartOf="@+id/groupADispatch"
+            app:layout_constraintTop_toTopOf="@+id/headingR4C1" />
+
+        <Switch
+            android:id="@+id/viewDispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/headingR5C1"
+            app:layout_constraintEnd_toEndOf="@+id/groupBDispatch"
+            app:layout_constraintStart_toStartOf="@+id/groupBDispatch"
+            app:layout_constraintTop_toTopOf="@+id/headingR5C1" />
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/n_a"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/headingR2C1"
+            app:layout_constraintEnd_toEndOf="@+id/headingR1C3"
+            app:layout_constraintStart_toStartOf="@+id/headingR1C3"
+            app:layout_constraintTop_toTopOf="@+id/headingR2C1" />
+
+        <Switch
+            android:id="@+id/groupAIntercept"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/groupADispatch"
+            app:layout_constraintEnd_toEndOf="@+id/headingR1C3"
+            app:layout_constraintStart_toStartOf="@+id/headingR1C3"
+            app:layout_constraintTop_toTopOf="@+id/groupADispatch" />
+
+        <Switch
+            android:id="@+id/groupBIntercept"
+            style="@style/AppTheme.SwitchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/groupBDispatch"
+            app:layout_constraintEnd_toEndOf="@+id/groupAIntercept"
+            app:layout_constraintStart_toStartOf="@+id/groupAIntercept"
+            app:layout_constraintTop_toTopOf="@+id/groupBDispatch" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/AppTheme.SwitchLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n_a"
+            app:layout_constraintBottom_toBottomOf="@+id/viewDispatch"
+            app:layout_constraintEnd_toEndOf="@+id/groupBIntercept"
+            app:layout_constraintStart_toStartOf="@+id/groupBIntercept"
+            app:layout_constraintTop_toTopOf="@+id/viewDispatch" />
+
+        <Switch
+            android:id="@+id/activityOnTouchEvent"
+            style="@style/AppTheme.SwitchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/activityDispatch"
+            app:layout_constraintEnd_toEndOf="@+id/headingR1C5"
+            app:layout_constraintStart_toStartOf="@+id/headingR1C5"
+            app:layout_constraintTop_toTopOf="@+id/activityDispatch" />
+
+        <Switch
+            android:id="@+id/groupAOnTouch"
+            style="@style/AppTheme.SwitchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/groupAIntercept"
+            app:layout_constraintEnd_toEndOf="@+id/headingR1C4"
+            app:layout_constraintStart_toStartOf="@+id/headingR1C4"
+            app:layout_constraintTop_toTopOf="@+id/groupAIntercept" />
+
+        <Switch
+            android:id="@+id/groupBOnTouch"
+            style="@style/AppTheme.SwitchStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/groupBIntercept"
+            app:layout_constraintEnd_toEndOf="@+id/groupAOnTouch"
+            app:layout_constraintStart_toStartOf="@+id/groupAOnTouch"
+            app:layout_constraintTop_toTopOf="@+id/groupBIntercept" />
+
+        <Switch
+            android:id="@+id/viewOnTouch"
+            style="@style/AppTheme.SwitchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/viewDispatch"
+            app:layout_constraintEnd_toEndOf="@+id/groupBOnTouch"
+            app:layout_constraintStart_toStartOf="@+id/groupBOnTouch"
+            app:layout_constraintTop_toTopOf="@+id/viewDispatch" />
+
+        <TextView
+            android:id="@+id/na1"
+            style="@style/AppTheme.SwitchLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n_a"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="@+id/headingR1C4"
+            app:layout_constraintStart_toStartOf="@+id/headingR1C4"
+            app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+        <Switch
+            android:id="@+id/groupAOnTouchEvent"
+            style="@style/AppTheme.SwitchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/groupAOnTouch"
+            app:layout_constraintEnd_toEndOf="@+id/activityOnTouchEvent"
+            app:layout_constraintStart_toStartOf="@+id/activityOnTouchEvent"
+            app:layout_constraintTop_toTopOf="@+id/groupAOnTouch" />
+
+        <Switch
+            android:id="@+id/groupBOnTouchEvent"
+            style="@style/AppTheme.SwitchStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/groupBOnTouch"
+            app:layout_constraintEnd_toEndOf="@+id/groupAOnTouchEvent"
+            app:layout_constraintStart_toStartOf="@+id/groupAOnTouchEvent"
+            app:layout_constraintTop_toTopOf="@+id/groupBOnTouch" />
+
+        <Switch
+            android:id="@+id/viewOnTouchEvent"
+            style="@style/AppTheme.SwitchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/viewOnTouch"
+            app:layout_constraintEnd_toEndOf="@+id/groupBOnTouchEvent"
+            app:layout_constraintStart_toStartOf="@+id/groupBOnTouchEvent"
+            app:layout_constraintTop_toTopOf="@+id/viewOnTouch" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="headingR2C1,headingR3C1,headingR4C1,headingR5C1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
