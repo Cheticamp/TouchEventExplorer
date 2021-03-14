@@ -105,12 +105,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="@string/ontouch_event"
+            android:text="@string/ontouchevent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/headingR1C4"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/activityDispatch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
             app:layout_constraintStart_toStartOf="@id/headingR1C2"
             app:layout_constraintTop_toTopOf="@+id/headingR2C1" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/groupADispatch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
             app:layout_constraintStart_toStartOf="@+id/activityDispatch"
             app:layout_constraintTop_toTopOf="@+id/headingR3C1" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/groupBDispatch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
             app:layout_constraintStart_toStartOf="@+id/groupADispatch"
             app:layout_constraintTop_toTopOf="@+id/headingR4C1" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/viewDispatch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,7 +145,6 @@
             app:layout_constraintEnd_toEndOf="@+id/groupBDispatch"
             app:layout_constraintStart_toStartOf="@+id/groupBDispatch"
             app:layout_constraintTop_toTopOf="@+id/headingR5C1" />
-
 
         <TextView
             android:id="@+id/textView5"
@@ -160,7 +159,7 @@
             app:layout_constraintStart_toStartOf="@+id/headingR1C3"
             app:layout_constraintTop_toTopOf="@+id/headingR2C1" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/groupAIntercept"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
@@ -169,7 +168,7 @@
             app:layout_constraintStart_toStartOf="@+id/headingR1C3"
             app:layout_constraintTop_toTopOf="@+id/groupADispatch" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/groupBIntercept"
             style="@style/AppTheme.SwitchStyle"
             android:layout_width="wrap_content"
@@ -190,7 +189,7 @@
             app:layout_constraintStart_toStartOf="@+id/groupBIntercept"
             app:layout_constraintTop_toTopOf="@+id/viewDispatch" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/activityOnTouchEvent"
             style="@style/AppTheme.SwitchStyle"
             android:layout_width="wrap_content"
@@ -201,7 +200,7 @@
             app:layout_constraintStart_toStartOf="@+id/headingR1C5"
             app:layout_constraintTop_toTopOf="@+id/activityDispatch" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/groupAOnTouch"
             style="@style/AppTheme.SwitchStyle"
             android:layout_width="wrap_content"
@@ -212,7 +211,7 @@
             app:layout_constraintStart_toStartOf="@+id/headingR1C4"
             app:layout_constraintTop_toTopOf="@+id/groupAIntercept" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/groupBOnTouch"
             style="@style/AppTheme.SwitchStyle"
             app:layout_constraintBottom_toBottomOf="@+id/groupBIntercept"
@@ -220,7 +219,7 @@
             app:layout_constraintStart_toStartOf="@+id/groupAOnTouch"
             app:layout_constraintTop_toTopOf="@+id/groupBIntercept" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/viewOnTouch"
             style="@style/AppTheme.SwitchStyle"
             android:layout_width="wrap_content"
@@ -241,7 +240,7 @@
             app:layout_constraintStart_toStartOf="@+id/headingR1C4"
             app:layout_constraintTop_toTopOf="@+id/textView5" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/groupAOnTouchEvent"
             style="@style/AppTheme.SwitchStyle"
             android:layout_width="wrap_content"
@@ -252,7 +251,7 @@
             app:layout_constraintStart_toStartOf="@+id/activityOnTouchEvent"
             app:layout_constraintTop_toTopOf="@+id/groupAOnTouch" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/groupBOnTouchEvent"
             style="@style/AppTheme.SwitchStyle"
             app:layout_constraintBottom_toBottomOf="@+id/groupBOnTouch"
@@ -260,7 +259,7 @@
             app:layout_constraintStart_toStartOf="@+id/groupAOnTouchEvent"
             app:layout_constraintTop_toTopOf="@+id/groupBOnTouch" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/viewOnTouchEvent"
             style="@style/AppTheme.SwitchStyle"
             android:layout_width="wrap_content"

@@ -17,6 +17,13 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/makeViewChildOfGroupA"
+        android:checkable="true"
+        android:title="@string/make_view_child_of_a"
+        app:actionViewClass="android.widget.Switch"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/reset_switches"
         android:orderInCategory="300"
         android:title="@string/reset_switches"
